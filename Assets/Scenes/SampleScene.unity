@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingArea (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2459656366385000176, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -191,6 +195,10 @@ PrefabInstance:
     - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_Name
       value: TrainingArea (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2459656366385000176, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -435,6 +443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingArea (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2459656366385000176, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -491,6 +503,10 @@ PrefabInstance:
     - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_Name
       value: TrainingArea (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2459656366385000176, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -549,6 +565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingArea (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2459656366385000176, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30
@@ -605,6 +625,10 @@ PrefabInstance:
     - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_Name
       value: TrainingArea (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2459656366385000176, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -663,6 +687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingArea (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2459656366385000176, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -720,6 +748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingArea (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2459656366385000176, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -773,6 +805,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1867928506054758169, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
+      propertyPath: m_BehaviorType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2077016203843593111, guid: f47ac5353f7d14e46a9fba4014d5ee6c, type: 3}
       propertyPath: m_Name
       value: TrainingArea

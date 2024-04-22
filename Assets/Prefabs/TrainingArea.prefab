@@ -399,7 +399,7 @@ MonoBehaviour:
   MaxStep: 0
   obstacle1: {fileID: 1110079433051772388}
   obstacle2: {fileID: 1363565934313502298}
-  minObstacleSpeed: 1
+  minObstacleSpeed: 2
   maxObstacleSpeed: 5
   jumpForce: 4
   reward: 1
