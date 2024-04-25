@@ -5,21 +5,61 @@ Joshua Hall: s1399133
 Jarn Vaerewijck: s144013
 
 ## Documentatie:
-...
-De bedoeling van dit project is om een stilstaande agent te laten springen over een bewegend obstakel.  
-Voor dit project moest er ook een extra functionaliteit gekozen worden, wij hebben gekozen om de agent obstakels van 2 kanten te laten ontwijken.  
-Hiervoor hebben we eerste een prefab gemaakt bestaand uit een plane, de agent en 2 obstakels.  
-  
-Alle bewegingen worden gestuurd vanuit de JumperAgent script op de agent, deze reset de locatie van de obstakels en geeft ze een random snelheid aan het begin van elke episode.  
-De obstakels bewegen dan naar de agent toe over de x- en z-as, als deze de agent aan raken krijgt die een negatieve score, als ze de agent niet aan raken en ze te ver gaan krijgt de agent een positieve score.  
-De agent weet op elk moment zijn eigen positie en de postie van de obstakels, om de obstakels te ontwijken heeft de agent alleen de mogelijkheid om te springen.  
-  
+Wij kozen voor 'de agent staat op het midden van een kruispunt en moet obstakels vermijden die vanuit 2 richtingen kunnen komen'.
+![image](https://github.com/AP-IT-GH/jumper-assignment-VinsiGit/assets/40694625/15dd3464-4ee7-4458-8360-58bb3a6aacb2)
+
+
+### config file:
+```yaml
+behaviors:
+  JumperAgent:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 10
+      buffer_size: 100
+      learning_rate: 1.0e-3
+      beta: 5.0e-4
+      epsilon: 0.2
+      lambd: 0.99
+      num_epoch: 3
+      learning_rate_schedule: linear
+      beta_schedule: constant
+      epsilon_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 128
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    max_steps: 200000
+    time_horizon: 64
+    summary_freq: 2000
+```
+### Opzet:
+- Opzet: Een kruispunt waar een agent in het midden is, een obstakel kan van de x- of z-as komen en de agent kan springen.
+- Doel: De agent moet over het obstakel springen.
+- Agents:
+  - Alle bewegingen worden gestuurd vanuit de JumperAgent script op de agent, deze reset de locatie van de obstakels en geeft ze een random snelheid aan het begin van elke episode.
+  - De agent weet op elk moment zijn eigen positie en de postie van de obstakels.
+- Agent Reward Functie:
+  - +1.0 als de agent over het obstakel springt.
+  - -1.0 als de agent het obstakel aanraakt.
+- Gedrag Parameters:
+  - Springen (2 mogelijke acties: springen, geen actie)
+  - Visuele observaties: Geen
+
 ### Trainen:
-...
-Bij het trainen is de minimale reward -1 en de maximale reward 1.  
-Als we de training starten zijn de eerste waarden vrijwel altijd rond de nul, wat zich vertaalt in een accuracy van ± 50%.  
-Dit is te verwachten van een agent die willekeurige acties neemt.  
-Als je naar de grafiek kijkt kan je zien dat de reward voor de eerste 30.000 stappen niet verbeterd, het is pas dan dat de gemiddelde reward begint te stijgen.  
-  
-![alt text](image.png)  
-Na 100.000 stappen bereikt de training een mean reward van ± 4, wat een accuracy van 80% geeft.
+
+![image](https://github.com/AP-IT-GH/jumper-assignment-VinsiGit/assets/40694625/40bcbf4c-e151-4ea2-a99f-8a742cd55fe4)
+
+
+Bij het trainen is de minimale reward -1 en de maximale reward 1.
+Als we de training starten zijn de eerste waarden vrijwel altijd rond de nul, wat zich vertaalt in een accuracy van ± 50%.
+Dit is te verwachten van een agent die willekeurige acties neemt.
+Als je naar de grafiek kijkt kan je zien dat de reward voor de eerste 30.000 stappen heel hard stijgt, het is pas dan dat de gemiddelde reward begint lineair te stijgt.
+
+Na 200.000 stappen bereikt de training een mean reward van 0.5, wat een accuracy van rond de 70% geeft.
+
+
